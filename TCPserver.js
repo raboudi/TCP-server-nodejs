@@ -15,14 +15,13 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
-        var pos = data.text().search("$L");
-
         // Write the data back to the socket, the client will receive it as data from the server
         sock.write('You said ' + data );
-        console.log("found $L at " + pos);
+        if (data.indexOf("$L") !== -1){
+        console.log("found $L ");
         console.log('receive login command');
         sock.write(login_reply);
-        
+        }
         
     });
     
