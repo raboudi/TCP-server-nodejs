@@ -2,7 +2,7 @@ var net = require('net');
 
 var HOST = '0.0.0.0';
 var PORT = 8498;
-var login_reply = ["1","2"];
+var login_reply = new Array("0x24","0x4C");
 var dataStr = JSON.stringify(login_reply); // converts object to string
 
 // Create a server instance, and chain the listen function to it
