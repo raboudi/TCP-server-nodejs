@@ -2,7 +2,7 @@ var net = require('net');
 
 var HOST = '0.0.0.0';
 var PORT = 8498;
-var login_reply = [1,2,3,4,5,6]
+var login_reply = [1,2,3,4,5,6];
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
 // The sock object the callback function receives UNIQUE for each connection
@@ -15,12 +15,14 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
+        var pos = data.search("$L");
+
         // Write the data back to the socket, the client will receive it as data from the server
         sock.write('You said ' + data );
-        if (data=='$L') {
-            console.log('receive login command');
-            sock.write(login_reply);
-        }
+        console.log("found $L at " + pos);
+        console.log('receive login command');
+        sock.write(login_reply);
+        
         
     });
     
