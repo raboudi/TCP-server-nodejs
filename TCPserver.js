@@ -15,7 +15,7 @@ net.createServer(function(sock) {
     sock.on('data', function(data) {
         
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
-        var pos = data.search("$L");
+        var pos = data.text().search("$L");
 
         // Write the data back to the socket, the client will receive it as data from the server
         sock.write('You said ' + data );
