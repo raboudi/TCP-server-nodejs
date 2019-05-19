@@ -18,7 +18,6 @@ net.createServer(function(sock) {
         
         console.log('DATA ' + sock.remoteAddress + ': ' + data);
         // Write the data back to the socket, the client will receive it as data from the server
-        sock.write('You said ' + data );
         if (data.indexOf("$L") !== -1){
         console.log("found $L ");
         console.log('receive login command');
