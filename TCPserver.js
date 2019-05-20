@@ -20,7 +20,7 @@ net.createServer(function(sock) {
         if (data.indexOf("$L") !== -1){
         console.log("found $L ");
         console.log('receive login command');
-        sock.write(JSON.stringify(login_reply));
+        sock.write(login_reply);
         }
         
     });
