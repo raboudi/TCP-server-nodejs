@@ -2,7 +2,7 @@ var net = require('net');
 
 var HOST = '0.0.0.0';
 var PORT = 8498;
-var login_reply = new Array("0x24","0x4C");
+var login_reply = new Array(0x24,0x4C);
 
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
