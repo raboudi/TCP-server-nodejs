@@ -5,8 +5,8 @@ var PORT = 8498;
 var data = '244C110D3879021E053ACAB00FFFFFFFFFFFFE';
 var bufferSize  = Buffer.byteLength(data);
 //var login_reply = new Buffer([0x24,0x4C,0xFF]);
-var login_reply = new Buffer(bufferSize,'hex');
-login_reply.write(data, 0, bufferSize);
+var login_reply = new Buffer(bufferSize);
+login_reply.write(data, 0, bufferSize,'hex');
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
 // The sock object the callback function receives UNIQUE for each connection
