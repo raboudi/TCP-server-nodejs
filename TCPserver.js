@@ -3,8 +3,8 @@ var net = require('net');
 var HOST = '0.0.0.0';
 var PORT = 8498;
 //var login_reply = new Buffer([0x24,0x4C,0x00,0xFF]);
-var login_reply = new Buffer("404C500D3880021E053AC00000FFFF011E",'hex');
-//var login_reply = new Buffer("404C107919443636333964003D0001010223000403840F0006057F00000000030002010807247401110501750111040476011102020103020A0103FE6C00C00101FE6300C0FE06003C60",'hex');
+//var login_reply = new Buffer("404C500D3880021E053AC00000FFFF011E",'hex');
+var login_reply = new Buffer("404C107919443636333964003D0001010223000403840F0006057F00000000030002010807247401110501750111040476011102020103020A0103FE6C00C00101FE6300C0FE06003C60",'hex');
 
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
