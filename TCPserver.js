@@ -5,7 +5,7 @@ var PORT = 8498;
 //var login_reply = new Buffer([0x24,0x4C,0x00,0xFF]);
 //var login_reply = new Buffer("404C500D3880021E053AC00000FFFF011E",'hex');
 var login_reply = new Buffer("404C107919C4633635333C002D0001010223C00403840F0006057F00000000030002010807247401110501750111040476011102020103020A0103FE6C00C00101FE6300C0FE06",'hex');
-var tacho_reply = new Buffer("245802040D3879021E0530") //token reply
+var tacho_reply = new Buffer("245802040D3879021E0530,'hex'") //token reply
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
 // The sock object the callback function receives UNIQUE for each connection
