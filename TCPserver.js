@@ -25,12 +25,12 @@ net.createServer(function(sock) {
         }
         else if (data.indexOf("$R") !== -1){
    	        console.log('$R received from ' + sock.remoteAddress + ': ' + data.toString('hex'));
+            console.log('Sending Tacho command');
+            sock.write(tacho_reply);
 
         }
         else if (data.indexOf("$X") !== -1){
             console.log('$X received from ' + sock.remoteAddress + ': ' + data.toString('hex'));
-            // Send tacho command
-            sock.write(tacho_reply);
         }
         else{
         	console.log('DATA received from ' + sock.remoteAddress + ': ' + data);
